@@ -1,0 +1,24 @@
+bool isPalindrome(int x) 
+{
+    long long rev = 0;
+    if(x==0)
+        return true;
+    else if(x<0)
+        return false;
+    else
+    {
+        int newx = x;
+        while(newx>0)
+        {
+            int temp = newx % 10;
+            rev = rev * 10 + temp;
+            newx /= 10;
+        }
+        if(x==rev)
+            return true;
+        else
+            return false;
+    }
+
+    
+}
